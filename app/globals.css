@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 238 54% 6%;
+  --foreground: 0 0% 100%;
+  --card: 336 24% 11%;
+  --card-foreground: 0 0% 100%;
+  --popover: 334 26% 9%;
+  --popover-foreground: 0 0% 100%;
+  --primary: 356 100% 50%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 334 18% 16%;
+  --secondary-foreground: 0 0% 90%;
+  --muted: 332 18% 14%;
+  --muted-foreground: 240 8% 72%;
+  --accent: 352 95% 52%;
+  --accent-foreground: 0 0% 100%;
+  --border: 330 18% 20%;
+  --input: 330 22% 13%;
+  --ring: 356 100% 50%;
+  --radius: 0.75rem;
+}
+
+* {
+  @apply border-border;
+}
+
+body {
+  @apply bg-background text-foreground min-h-screen antialiased;
+  background-image:
+    radial-gradient(circle at 16% 18%, rgba(36, 46, 132, 0.18), transparent 34%),
+    radial-gradient(circle at 86% 14%, rgba(196, 10, 44, 0.34), transparent 31%),
+    radial-gradient(circle at 60% 82%, rgba(148, 12, 50, 0.24), transparent 37%),
+    linear-gradient(180deg, #05060f 0%, #070714 46%, #070611 100%);
+  background-attachment: fixed;
+}
+
+.yaksha-logo {
+  letter-spacing: 0.45em;
+  font-weight: 800;
+  color: #ff001e;
+  text-shadow:
+    0 0 12px rgba(255, 10, 38, 0.32),
+    0 0 26px rgba(255, 0, 30, 0.2);
+}
+
+.yaksha-panel {
+  background: linear-gradient(180deg, rgba(44, 14, 32, 0.78), rgba(18, 9, 20, 0.92));
+  backdrop-filter: blur(6px);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  -webkit-text-fill-color: #fafafa !important;
+  box-shadow: 0 0 0 1000px #120e18 inset !important;
+  caret-color: #fafafa;
+  transition: background-color 9999s ease-in-out 0s;
+}
